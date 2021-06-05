@@ -16,7 +16,10 @@ const obfuscateAndMinifyContent = content => {
 
 const validateOptions = options => {
     for(var property in defaultOptions) {
-        if(!options.hasOwnProperty(property)) options[property] = defaultOptions[property];
+        if(options.hasOwnProperty(property)) {
+            continue;
+        }
+        options[property] = defaultOptions[property];
     }
 };
 
@@ -47,7 +50,7 @@ const init = options => {
         } 
         res.send(output);
     };
-}
+};
 
 
 module.exports = init;
