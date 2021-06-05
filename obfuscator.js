@@ -9,11 +9,20 @@ const readFile = path => {
     return fs.readFileSync(path, 'utf-8');  
 };
 
+/**
+ * Obfsucate and minify a string
+ * @param {string} content 
+ * @returns A new string that's obfuscated and minfied
+ */
 const obfuscateAndMinifyContent = content => {
     const obfuscatedContents = obfuscator.obfuscate(content).getObfuscatedCode();
     return UglifyJS.minify(obfuscatedContents).code;
 };
 
+/**
+ * Validates the option object and adds the appropriate fields if they are absent
+ * @param {object} options 
+ */
 const validateOptions = options => {
     for(var property in defaultOptions) {
         if(options.hasOwnProperty(property)) {
