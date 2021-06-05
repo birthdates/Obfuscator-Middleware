@@ -4,6 +4,11 @@ const defaultOptions = {store: require('store'), location: './', param: 'fileNam
 const UglifyJS = require("uglify-js");
 const obfuscator = require("javascript-obfuscator");
 
+/**
+ * Read a file from given path
+ * @param {string} path 
+ * @returns The files content in UTF-8 encoding
+ */
 const readFile = path => {
     if(!fs.existsSync(path)) return null;
     return fs.readFileSync(path, 'utf-8');  
@@ -32,6 +37,11 @@ const validateOptions = options => {
     }
 };
 
+/**
+ * The main init function, our only export
+ * @param {object} options 
+ * @returns A middleware for Express servers (or whoever else can use it)
+ */
 const init = options => {
     if(!options) {
         options = defaultOptions;
