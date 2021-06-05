@@ -1,6 +1,6 @@
 {
   "name": "obfuscator-middleware",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Obfuscate and serve your JS files with a middleware",
   "main": "obfuscator.js",
   "scripts": {
