@@ -1,4 +1,5 @@
-# Obfuscator Middleware
+# Obfuscator Middleware [![NPM Version](https://img.shields.io/npm/v/obfuscator-middleware.svg)](https://www.npmjs.com/package/obfuscator-middleware) ![node](https://img.shields.io/node/v/obfuscator-middleware.svg) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 The way this middleware works is it's an express middleware for serving minified obfuscated Javascript files.
 You can serve it at a certain path and method.
 
