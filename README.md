@@ -19,3 +19,13 @@ const obf = require("./obfuscator");
 app.get('/scripts/:fileName.js', obf({location: './assets/scripts/'}));
 ```
 In this example, anything requesting `GET` from `/scripts/*.js` will be found from `./assets/scripts/` and served obfuscated.
+
+## Before
+```js
+console.log("Hello World");
+```
+
+## After
+```js
+var _0x3bd1=["1FhAdKg","736427PHdfOG","317622WXJmvL","8606ZVtrej","395851sodQMq","71312Afnxvx","427562qIquUR","2hxrSZa","84moaWHU","672326wHdSex","Hello World","log"],_0x2c3f2a=_0x3293;function _0x3293(r,a){return _0x3bd1[r-=319]}(function(a){for(var r=_0x3293;;)try{if(601688===parseInt(r(326))+-parseInt(r(322))+parseInt(r(330))+-parseInt(r(324))*parseInt(r(319))+parseInt(r(325))*parseInt(r(320))+-parseInt(r(323))*parseInt(r(329))+-parseInt(r(321)))break;a.push(a.shift())}catch(r){a.push(a.shift())}})(_0x3bd1),console[_0x2c3f2a(328)](_0x2c3f2a(327));
+```
